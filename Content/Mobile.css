@@ -1,0 +1,28 @@
+/* Professional shell for the ASP.NET mobile master page. */
+.mobile-app-body{min-height:100vh;margin:0;background:#f3f7f5;color:#203746;font-family:"Segoe UI",Arial,sans-serif}
+.mobile-app-body #form1{min-height:100vh;display:flex;flex-direction:column}
+.mobile-site-header{position:sticky;top:0;z-index:1000;background:#123c34;color:#fff;box-shadow:0 4px 16px #122b241f}
+.mobile-header-bar{position:relative;display:flex;min-height:68px;align-items:center;justify-content:space-between;gap:16px;max-width:1240px;margin:0 auto;padding:0 22px}
+.mobile-site-brand{display:inline-flex;align-items:center;gap:11px;color:#fff;text-decoration:none}
+.mobile-brand-mark{display:inline-flex;width:39px;height:39px;align-items:center;justify-content:center;border:1px solid #ffffff55;border-radius:11px;background:#ffffff14;color:#fff;font-size:20px;font-weight:800}
+.mobile-brand-copy{display:flex;flex-direction:column;color:#fff;font-size:15px;font-weight:800;letter-spacing:.11em;line-height:1.2}
+.mobile-brand-copy small{margin-top:4px;color:#c8ddd5;font-size:9px;font-weight:600;letter-spacing:.12em}
+.mobile-navigation{position:relative}
+.mobile-navigation summary{display:inline-flex;min-height:40px;align-items:center;gap:9px;padding:0 14px;border:1px solid #ffffff45;border-radius:8px;color:#fff;font-size:14px;font-weight:700;cursor:pointer;list-style:none;user-select:none}
+.mobile-navigation summary::-webkit-details-marker{display:none}
+.mobile-navigation summary:hover,.mobile-navigation[open] summary{background:#ffffff14;border-color:#ffffff7a}
+.mobile-menu-mark{font-size:17px;line-height:1}
+.mobile-navigation-links{position:absolute;top:calc(100% + 12px);right:0;display:grid;width:min(360px,calc(100vw - 28px));grid-template-columns:1fr;background:#fff;border:1px solid #dce6e0;border-radius:12px;box-shadow:0 14px 36px #122b2430;overflow:hidden}
+.mobile-navigation-links a{display:flex;min-height:45px;align-items:center;gap:12px;padding:8px 15px;border-bottom:1px solid #edf1ee;color:#263f4e;font-size:14px;font-weight:650;text-decoration:none}
+.mobile-navigation-links a:hover,.mobile-navigation-links a:focus{background:#f0f6f2;color:#145d43}
+.mobile-navigation-links a>span{width:22px;color:#70857a;font-size:10px;font-weight:800;letter-spacing:.05em}
+.mobile-navigation-links .mobile-signout-link{border-top:1px solid #e5ece7;border-bottom:0;background:#f8faf8;color:#8a3d37}
+.mobile-navigation-links .mobile-signout-link>span{font-size:14px}
+.mobile-main{box-sizing:border-box;width:100%;max-width:1280px;flex:1;margin:0 auto;padding:18px 18px 36px}
+.mobile-main .standard-page{box-sizing:border-box;width:100%;max-width:none;margin:0 auto}
+.mobile-site-footer{display:flex;min-height:52px;align-items:center;justify-content:space-between;gap:14px;padding:12px 22px;background:#fff;border-top:1px solid #dce6e0;color:#61736d;font-size:12px;font-weight:600}
+.mobile-site-footer a{color:#176b4b;font-weight:700;text-decoration:none}
+.mobile-site-footer a:hover{text-decoration:underline}
+@media(max-width:600px){.mobile-header-bar{min-height:62px;padding:0 14px}.mobile-brand-mark{width:36px;height:36px}.mobile-brand-copy{font-size:14px}.mobile-main{padding:12px 10px 26px}.mobile-site-footer{align-items:flex-start;flex-direction:column;padding:13px 15px}}
+@media(min-width:601px){.mobile-navigation-links{grid-template-columns:1fr 1fr;width:440px}.mobile-navigation-links a:nth-last-child(1){grid-column:1/-1}}
+@media print{.mobile-site-header,.mobile-site-footer{display:none!important}.mobile-main{max-width:none;padding:0}.mobile-app-body{background:#fff}}

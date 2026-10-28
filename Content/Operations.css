@@ -1,0 +1,287 @@
+/* Shared presentation for transaction, ledger, and report content hosted by Site.Master. */
+.standard-page{display:block;max-width:1240px;margin:0 auto;padding:30px 28px 54px;color:#203747;font:13px "Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}.standard-page-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:0 0 21px;padding:0 1px}.standard-page-kicker{color:#21815e;font-size:9px;letter-spacing:.16em;font-weight:700;margin:0 0 7px}.standard-page-heading h1{margin:0;color:#1d3444;font-size:25px;line-height:1.2;letter-spacing:-.03em;font-weight:700}.standard-page-heading>div>p:last-child{margin:6px 0 0;color:#83919b;font-size:11px}.standard-page-home{display:inline-flex;align-items:center;gap:7px;border:1px solid #dfe7e9;border-radius:5px;background:white;padding:9px 12px;text-decoration:none;color:#536977!important;font-size:10px;font-weight:600;white-space:nowrap}.standard-page-home:hover{border-color:#b1d6c3;color:#177a55!important}
+.standard-page h1,.standard-page h2,.standard-page h3{color:#203747;font-family:"Segoe UI",Arial,sans-serif}
+.standard-page table{width:min(1160px,100%)!important;max-width:100%!important;height:auto!important;margin:14px auto!important;border-collapse:separate!important;border-spacing:0!important;border:1px solid #e4eaed!important;border-radius:8px!important;background:#fff!important;box-shadow:0 3px 12px #233b4a08}
+.standard-page table table{width:100%!important;max-width:100%!important;margin:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important}
+.standard-page table.legacy-title-row{display:none!important}
+.standard-page td,.standard-page th{height:auto!important;padding:9px 11px!important;border-color:#e9eef0!important;background-color:transparent!important;color:#344b5a!important;vertical-align:middle}
+.standard-page th{font-size:10px!important;font-weight:700!important;color:#546a77!important;background:#f4f7f8!important}
+.standard-page input:not([type=checkbox]):not([type=radio]),.standard-page select,.standard-page textarea{box-sizing:border-box;max-width:100%!important;min-height:34px;padding:6px 9px!important;border:1px solid #dce4e8!important;border-radius:4px!important;background:#fff!important;color:#2c4352!important;font:12px "Segoe UI",Arial,sans-serif!important;box-shadow:none!important}
+.standard-page input[type=submit],.standard-page input[type=button],.standard-page button{min-height:34px;padding:7px 13px!important;border:1px solid #18855f!important;border-radius:4px!important;background:#1b8c64!important;color:#fff!important;font:600 11px "Segoe UI",Arial,sans-serif!important;cursor:pointer}
+.standard-page input[type=submit]:hover,.standard-page input[type=button]:hover,.standard-page button:hover{background:#126e4e!important}.standard-page input[type=checkbox],.standard-page input[type=radio]{max-width:none!important}.standard-page a{color:#21815e}.standard-page .GridView,.standard-page .gridview{font-size:11px}
+@media(max-width:760px){.standard-page{padding:22px 12px 35px}.standard-page-heading{align-items:flex-start}.standard-page-heading h1{font-size:21px}.standard-page-home{padding:8px 9px;font-size:9px}.standard-page table{width:100%!important;margin:10px 0!important}.standard-page td,.standard-page th{padding:6px!important}.standard-page input:not([type=checkbox]):not([type=radio]),.standard-page select,.standard-page textarea{min-height:32px}}
+@media print{.site-header,.standard-page-heading,.app-footer{display:none!important}.standard-page{max-width:none;padding:0}.standard-page table{box-shadow:none!important}}
+
+/* Focused, readable layout for processing sales returns. */
+.return-page{max-width:1120px;padding-top:34px}
+.return-page .standard-page-heading{margin-bottom:25px}
+.return-page .standard-page-heading h1{font-size:30px;font-weight:750;color:#193747}
+.return-page .standard-page-heading>div>p:last-child{font-size:14px;color:#526675}
+.return-card,.return-results{margin:0 0 22px;padding:24px;background:#fff;border:1px solid #dce6e0;border-radius:12px;box-shadow:0 5px 18px #203b2d0a}
+.return-section-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.return-section-heading h2{margin:0 0 5px;color:#203746;font-size:20px;font-weight:700}
+.return-section-heading p{margin:0;color:#526675;font-size:14px;line-height:1.5}
+.return-form-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px 18px}
+.return-field{display:flex;min-width:0;flex-direction:column;gap:8px}
+.return-invoice-field{grid-column:span 2}
+.return-field label{color:#263f4e;font-size:14px;font-weight:700}
+.return-page .return-field input:not([type=checkbox]):not([type=radio]){width:100%;min-height:44px;padding:9px 12px!important;border:1px solid #cbd9d1!important;border-radius:7px!important;background:#fff!important;color:#203746!important;font:500 14px "Segoe UI",Arial,sans-serif!important}
+.return-page .return-field input:disabled{background:#f1f5f2!important;color:#405866!important;opacity:1}
+.return-invoice-search{display:flex;gap:10px}
+.return-page .return-invoice-search .return-show-button,.return-page .return-actions .return-submit-button{width:auto;min-height:44px;padding:9px 18px!important;border:1px solid #176b4b!important;border-radius:7px!important;background:#176b4b!important;color:#fff!important;font:700 14px "Segoe UI",Arial,sans-serif!important;white-space:nowrap}
+.return-page .return-invoice-search .return-show-button:hover,.return-page .return-actions .return-submit-button:hover{background:#10563c!important}
+.return-actions{display:flex;justify-content:flex-end;margin-top:23px;padding-top:19px;border-top:1px solid #e3ebe6}
+.return-results{padding-bottom:18px}
+.return-table-wrap{max-width:100%;overflow-x:auto}
+.return-page .return-grid{width:100%!important;margin:0!important;border-collapse:collapse!important;border:1px solid #dce6e0!important;border-radius:8px!important;box-shadow:none!important;font-size:13px}
+.return-page .return-grid th{padding:12px 14px!important;background:#eaf2ed!important;color:#203b31!important;font-size:13px!important;font-weight:700!important;text-align:left}
+.return-page .return-grid td{padding:12px 14px!important;border-bottom:1px solid #e4ebe6!important;background:#fff!important;color:#304957!important;font-size:13px!important}
+.return-page .return-grid tr:nth-child(even) td{background:#f8faf8!important}
+.return-page .return-grid a{color:#176b4b!important;font-weight:700;text-decoration:underline;text-underline-offset:2px}
+.return-page .return-grid a:hover{color:#104c37!important}
+.return-page .return-grid td[colspan]{padding:20px!important;color:#526675!important;font-weight:600}
+@media(max-width:760px){.return-page{padding:22px 14px 36px}.return-page .standard-page-heading h1{font-size:26px}.return-card,.return-results{padding:19px 16px}.return-form-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:17px 14px}.return-invoice-field{grid-column:span 2}.return-section-heading p{font-size:13px}}
+@media(max-width:460px){.return-form-grid{grid-template-columns:1fr}.return-invoice-field{grid-column:auto}.return-invoice-search{flex-direction:column}.return-page .return-invoice-search .return-show-button{width:100%}.return-actions .return-submit-button{width:100%!important}.return-actions{justify-content:stretch}.return-page .standard-page-heading{align-items:flex-start}.return-page .standard-page-home{font-size:11px}}
+
+/* Clear customer summary and transaction-entry cards for the customer ledger. */
+.customer-ledger-page{max-width:1120px;padding-top:34px}
+.customer-ledger-page .standard-page-heading{margin-bottom:25px}
+.customer-ledger-page .standard-page-heading h1{font-size:30px;font-weight:750;color:#193747}
+.customer-ledger-page .standard-page-heading>div>p:last-child{font-size:14px;color:#526675}
+.ledger-card{margin:0 0 22px;padding:24px;background:#fff;border:1px solid #dce6e0;border-radius:12px;box-shadow:0 5px 18px #203b2d0a}
+.ledger-section-heading{margin-bottom:20px}
+.ledger-section-heading h2{margin:0 0 5px;color:#203746;font-size:20px;font-weight:700}
+.ledger-section-heading p{margin:0;color:#526675;font-size:14px;line-height:1.5}
+.customer-select-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:14px;max-width:760px;margin-bottom:22px}
+.customer-select-field{max-width:560px}
+.customer-summary-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.ledger-form-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px 16px}
+.ledger-detail-field{grid-column:span 2}
+.ledger-particulars-field{grid-column:span 2}
+.ledger-field{display:flex;min-width:0;flex-direction:column;gap:8px}
+.ledger-field label{color:#263f4e;font-size:14px;font-weight:700}
+.customer-ledger-page .ledger-field input:not([type=checkbox]):not([type=radio]),.customer-ledger-page .ledger-field select{width:100%;min-height:44px;padding:9px 12px!important;border:1px solid #cbd9d1!important;border-radius:7px!important;background:#fff!important;color:#203746!important;font:500 14px "Segoe UI",Arial,sans-serif!important}
+.customer-ledger-page .ledger-field input:disabled{background:#f1f5f2!important;color:#405866!important;opacity:1}
+.customer-ledger-page .balance-field input:disabled{background:#edf5ef!important;color:#145d43!important;font-weight:700!important}
+.customer-ledger-page .ledger-action-button{width:auto;min-height:44px;padding:9px 18px!important;border:1px solid #176b4b!important;border-radius:7px!important;background:#176b4b!important;color:#fff!important;font:700 14px "Segoe UI",Arial,sans-serif!important;white-space:nowrap}
+.customer-ledger-page .ledger-action-button:hover{background:#10563c!important}
+.customer-ledger-page .secondary-ledger-button{background:#fff!important;color:#176b4b!important}
+.customer-ledger-page .secondary-ledger-button:hover{background:#edf5ef!important}
+.ledger-actions{display:flex;justify-content:flex-end;margin-top:23px;padding-top:19px;border-top:1px solid #e3ebe6}
+@media(max-width:760px){.customer-ledger-page{padding:22px 14px 36px}.customer-ledger-page .standard-page-heading h1{font-size:26px}.ledger-card{padding:19px 16px}.customer-summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ledger-form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ledger-detail-field,.ledger-particulars-field{grid-column:span 2}.ledger-section-heading p{font-size:13px}}
+@media(max-width:460px){.customer-select-row{grid-template-columns:1fr}.customer-summary-grid,.ledger-form-grid{grid-template-columns:1fr}.ledger-detail-field,.ledger-particulars-field{grid-column:auto}.customer-ledger-page .secondary-ledger-button,.ledger-actions .ledger-action-button{width:100%!important}.ledger-actions{justify-content:stretch}.customer-ledger-page .standard-page-heading{align-items:flex-start}}
+
+/* Professional income and expenses entry form. */
+.income-page{max-width:1120px;padding-top:34px}
+.income-page .standard-page-heading{margin-bottom:25px}
+.income-page .standard-page-heading h1{font-size:30px;font-weight:750;color:#193747}
+.income-page .standard-page-heading>div>p:last-child{font-size:14px;color:#526675}
+.income-card{padding:24px;background:#fff;border:1px solid #dce6e0;border-radius:12px;box-shadow:0 5px 18px #203b2d0a}
+.income-card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:23px}
+.income-card-header h2{margin:0 0 5px;color:#203746;font-size:20px;font-weight:700}
+.income-card-header p{margin:0;color:#526675;font-size:14px;line-height:1.5}
+.income-branch-summary{display:flex;align-items:center;gap:10px;flex:0 0 auto;padding:9px 12px;border:1px solid #dce8df;border-radius:8px;background:#f5f9f6}
+.income-branch-summary>span{color:#526675;font-size:12px;font-weight:600}
+.income-branch-pill{display:inline-flex;align-items:center;min-height:28px;padding:4px 10px;border-radius:20px;background:#e2f0e6;color:#145d43;font-size:12px;font-weight:700}
+.income-form-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px 16px}
+.income-field{display:flex;min-width:0;flex-direction:column;gap:8px}
+.income-detail-field,.income-particulars-field{grid-column:span 2}
+.income-field label{color:#263f4e;font-size:14px;font-weight:700}
+.income-page .income-field input:not([type=checkbox]):not([type=radio]),.income-page .income-field select{width:100%;min-height:44px;padding:9px 12px!important;border:1px solid #cbd9d1!important;border-radius:7px!important;background:#fff!important;color:#203746!important;font:500 14px "Segoe UI",Arial,sans-serif!important}
+.income-page .income-field input:disabled{background:#edf5ef!important;color:#145d43!important;font-weight:700!important;opacity:1}
+.income-form-actions{display:flex;justify-content:flex-end;margin-top:23px;padding-top:19px;border-top:1px solid #e3ebe6}
+.income-page .income-submit-button{width:auto;min-height:44px;padding:9px 20px!important;border:1px solid #176b4b!important;border-radius:7px!important;background:#176b4b!important;color:#fff!important;font:700 14px "Segoe UI",Arial,sans-serif!important;white-space:nowrap}
+.income-page .income-submit-button:hover{background:#10563c!important}
+@media(max-width:760px){.income-page{padding:22px 14px 36px}.income-page .standard-page-heading h1{font-size:26px}.income-card{padding:19px 16px}.income-form-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:17px 14px}.income-detail-field,.income-particulars-field{grid-column:span 2}.income-card-header p{font-size:13px}}
+@media(max-width:460px){.income-page .standard-page-heading{align-items:flex-start}.income-card-header{flex-direction:column}.income-branch-summary{width:100%;justify-content:space-between}.income-form-grid{grid-template-columns:1fr}.income-detail-field,.income-particulars-field{grid-column:auto}.income-form-actions{justify-content:stretch}.income-page .income-submit-button{width:100%!important}}
+
+/* Clear, responsive supplier setup form. */
+.supplier-page{max-width:1120px;padding-top:34px}
+.supplier-page .standard-page-heading{margin-bottom:25px}
+.supplier-page .standard-page-heading h1{font-size:30px;font-weight:750;color:#193747}
+.supplier-page .standard-page-heading>div>p:last-child{font-size:14px;color:#526675}
+.supplier-card{padding:24px;background:#fff;border:1px solid #dce6e0;border-radius:12px;box-shadow:0 5px 18px #203b2d0a}
+.supplier-card-heading{margin-bottom:23px}
+.supplier-card-heading h2{margin:0 0 5px;color:#203746;font-size:20px;font-weight:700}
+.supplier-card-heading p{margin:0;color:#526675;font-size:14px;line-height:1.5}
+.supplier-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 18px}
+.supplier-field{display:flex;min-width:0;flex-direction:column;gap:8px}
+.supplier-field label{color:#263f4e;font-size:14px;font-weight:700}
+.supplier-address-field{grid-column:1/-1}
+.supplier-page .supplier-field input{width:100%;min-height:46px;padding:10px 12px!important;border:1px solid #cbd9d1!important;border-radius:7px!important;background:#fff!important;color:#203746!important;font:500 14px "Segoe UI",Arial,sans-serif!important}
+.supplier-page .supplier-field input::placeholder{color:#7a8a91;opacity:1}
+.supplier-phone-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px}
+.supplier-page .supplier-find-button,.supplier-page .supplier-action-button{width:auto;min-height:46px;padding:10px 18px!important;border:1px solid #176b4b!important;border-radius:7px!important;background:#176b4b!important;color:#fff!important;font:700 14px "Segoe UI",Arial,sans-serif!important;white-space:nowrap}
+.supplier-page .supplier-find-button:hover,.supplier-page .supplier-action-button:hover{background:#10563c!important}
+.supplier-page .supplier-secondary-button{border-color:#b7cec0!important;background:#fff!important;color:#176b4b!important}
+.supplier-page .supplier-secondary-button:hover{background:#edf5ef!important}
+.supplier-form-actions{display:flex;justify-content:flex-end;gap:11px;margin-top:24px;padding-top:19px;border-top:1px solid #e3ebe6}
+@media(max-width:760px){.supplier-page{padding:22px 14px 36px}.supplier-page .standard-page-heading h1{font-size:26px}.supplier-card{padding:20px 17px}.supplier-form-grid{gap:17px 14px}}
+@media(max-width:460px){.supplier-page .standard-page-heading{align-items:flex-start}.supplier-form-grid{grid-template-columns:1fr}.supplier-address-field{grid-column:auto}.supplier-phone-row{grid-template-columns:1fr}.supplier-page .supplier-find-button,.supplier-form-actions .supplier-action-button{width:100%!important}.supplier-form-actions{flex-direction:column-reverse}}
+.supplier-ledger-name-label{display:inline-block;color:#fff;font-size:14px;font-weight:700;line-height:1.4}
+
+/* Supplier ledger account summary and transaction form. */
+.supplier-ledger-page{max-width:1120px;padding-top:34px;padding-bottom:42px}
+.supplier-ledger-page .standard-page-heading{margin-bottom:24px}
+.supplier-ledger-page .standard-page-heading h1{font-size:30px;font-weight:750;color:#193747}
+.supplier-ledger-page .standard-page-heading>div>p:last-child{font-size:14px;color:#526675}
+.supplier-ledger-card{margin-bottom:20px;padding:24px;background:#fff;border:1px solid #dce6e0;border-radius:12px;box-shadow:0 5px 18px #203b2d0a}
+.supplier-ledger-card-heading{margin-bottom:21px}
+.supplier-ledger-card-heading h2{margin:0 0 5px;color:#203746;font-size:20px;font-weight:700}
+.supplier-ledger-card-heading p{margin:0;color:#526675;font-size:14px;line-height:1.5}
+.supplier-ledger-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 20px}
+.supplier-ledger-field{display:flex;min-width:0;flex-direction:column;gap:8px}
+.supplier-ledger-field label{color:#263f4e;font-size:14px;font-weight:700}
+.supplier-ledger-page .supplier-ledger-field input:not([type=checkbox]):not([type=radio]),.supplier-ledger-page .supplier-ledger-field select{box-sizing:border-box;width:100%;min-height:45px;padding:9px 12px!important;border:1px solid #cbd9d1!important;border-radius:7px!important;background:#fff!important;color:#203746!important;font:500 14px "Segoe UI",Arial,sans-serif!important}
+.supplier-ledger-page .supplier-ledger-field input:disabled{background:#f1f5f2!important;color:#405866!important;opacity:1}
+.supplier-ledger-page .supplier-ledger-balance-field input:disabled{background:#edf5ef!important;color:#145d43!important;font-weight:700!important}
+.supplier-ledger-page .supplier-ledger-actions{display:flex;justify-content:flex-end;margin-top:23px;padding-top:19px;border-top:1px solid #e3ebe6}
+.supplier-ledger-page .supplier-ledger-submit{width:auto;min-height:46px;padding:10px 20px!important;border:1px solid #176b4b!important;border-radius:7px!important;background:#176b4b!important;color:#fff!important;font:700 14px "Segoe UI",Arial,sans-serif!important;white-space:nowrap;cursor:pointer}
+.supplier-ledger-page .supplier-ledger-submit:hover{background:#10563c!important}
+@media(max-width:760px){.supplier-ledger-page{padding:22px 14px 36px}.supplier-ledger-page .standard-page-heading h1{font-size:26px}.supplier-ledger-card{padding:20px 17px}.supplier-ledger-grid{gap:16px 14px}}
+@media(max-width:460px){.supplier-ledger-page .standard-page-heading{align-items:flex-start}.supplier-ledger-grid{grid-template-columns:1fr}.supplier-ledger-page .supplier-ledger-actions{justify-content:stretch}.supplier-ledger-page .supplier-ledger-submit{width:100%!important}}
+
+/* Customer directory with clear branch filtering and a responsive data grid. */
+.customers-page{max-width:1200px;padding-top:34px;padding-bottom:42px}
+.customers-page .standard-page-heading{margin-bottom:24px}
+.customers-page .standard-page-heading h1{font-size:30px;font-weight:750;color:#193747}
+.customers-page .standard-page-heading>div>p:last-child{font-size:14px;color:#526675}
+.customers-card{padding:24px;background:#fff;border:1px solid #dce6e0;border-radius:12px;box-shadow:0 5px 18px #203b2d0a}
+.customers-card-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:22px}
+.customers-card-heading h2{margin:0 0 5px;color:#203746;font-size:20px;font-weight:700}
+.customers-card-heading p{margin:0;color:#526675;font-size:14px;line-height:1.5}
+.customers-branch-pill{display:flex;align-items:center;gap:10px;flex:0 0 auto;padding:9px 12px;border:1px solid #dce8df;border-radius:8px;background:#f5f9f6}
+.customers-branch-pill>span{color:#526675;font-size:12px;font-weight:600}
+.customers-page .customers-branch-value{display:inline-flex;align-items:center;min-height:28px;padding:4px 10px;border-radius:20px;background:#e2f0e6;color:#145d43;font-size:12px;font-weight:700}
+.customers-filter{display:flex;align-items:flex-end;gap:12px;margin-bottom:20px;padding:16px;background:#f6f9f7;border:1px solid #e3ebe6;border-radius:9px}
+.customers-filter-field{display:flex;min-width:220px;max-width:360px;flex:1;flex-direction:column;gap:7px}
+.customers-filter-field label{color:#263f4e;font-size:13px;font-weight:700}
+.customers-page .customers-filter-field input{box-sizing:border-box;width:100%;min-height:44px;padding:9px 12px!important;border:1px solid #cbd9d1!important;border-radius:7px!important;background:#fff!important;color:#203746!important;font:500 14px "Segoe UI",Arial,sans-serif!important}
+.customers-page .customers-filter-button{width:auto;min-height:44px;padding:9px 18px!important;border:1px solid #176b4b!important;border-radius:7px!important;background:#176b4b!important;color:#fff!important;font:700 14px "Segoe UI",Arial,sans-serif!important;white-space:nowrap;cursor:pointer}
+.customers-page .customers-filter-button:hover{background:#10563c!important}
+.customers-table-wrap{width:100%;overflow-x:auto;border:1px solid #dce6e0;border-radius:9px}
+.customers-page .customers-grid{width:100%;min-width:640px;border-collapse:collapse;background:#fff;color:#273d49;font:14px "Segoe UI",Arial,sans-serif}
+.customers-page .customers-grid th{padding:13px 15px;background:#174f3e;color:#fff;text-align:left;font-size:13px;font-weight:700;letter-spacing:.02em}
+.customers-page .customers-grid td{padding:13px 15px;border-top:1px solid #e7eeea;color:#314854;line-height:1.45;text-align:left}
+.customers-page .customers-grid tr.customers-grid-alternate td{background:#f6f9f7}
+.customers-page .customers-grid tr:hover td{background:#edf5ef}
+.customers-page .customers-grid-empty td{padding:24px;text-align:center;color:#526675}
+@media(max-width:760px){.customers-page{padding:22px 14px 36px}.customers-page .standard-page-heading h1{font-size:26px}.customers-card{padding:20px 17px}.customers-card-heading{flex-direction:column}.customers-branch-pill{width:100%;box-sizing:border-box;justify-content:space-between}.customers-filter{align-items:stretch;flex-direction:column}.customers-filter-field{min-width:0;max-width:none}.customers-page .customers-filter-button{width:100%!important}}
+
+/* Consistent, readable product and supplier directories. */
+.catalog-page,.suppliers-page{max-width:1200px;padding-top:34px;padding-bottom:42px}
+.catalog-page .standard-page-heading,.suppliers-page .standard-page-heading{margin-bottom:24px}
+.catalog-page .standard-page-heading h1,.suppliers-page .standard-page-heading h1{font-size:30px;font-weight:750;color:#193747}
+.catalog-page .standard-page-heading>div>p:last-child,.suppliers-page .standard-page-heading>div>p:last-child{font-size:14px;color:#526675}
+.catalog-card,.suppliers-card{padding:24px;background:#fff;border:1px solid #dce6e0;border-radius:12px;box-shadow:0 5px 18px #203b2d0a}
+.catalog-card-heading,.suppliers-card-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:22px}
+.catalog-card-heading h2,.suppliers-card-heading h2{margin:0 0 5px;color:#203746;font-size:20px;font-weight:700}
+.catalog-card-heading p,.suppliers-card-heading p{margin:0;color:#526675;font-size:14px;line-height:1.5}
+.catalog-table-wrap,.suppliers-table-wrap{width:100%;overflow-x:auto;border:1px solid #dce6e0;border-radius:9px}
+.catalog-page .catalog-grid,.suppliers-page .suppliers-grid{width:100%;min-width:540px;border-collapse:collapse;background:#fff;color:#273d49;font:14px "Segoe UI",Arial,sans-serif}
+.catalog-page .catalog-grid th,.suppliers-page .suppliers-grid th{padding:13px 15px;background:#174f3e;color:#fff;text-align:left;font-size:13px;font-weight:700;letter-spacing:.02em;white-space:nowrap}
+.catalog-page .catalog-grid td,.suppliers-page .suppliers-grid td{padding:13px 15px;border-top:1px solid #e7eeea;color:#314854;line-height:1.45;text-align:left}
+.catalog-page .catalog-grid tr.catalog-grid-alternate td,.suppliers-page .suppliers-grid tr.suppliers-grid-alternate td{background:#f6f9f7}
+.catalog-page .catalog-grid tr:hover td,.suppliers-page .suppliers-grid tr:hover td{background:#edf5ef}
+.catalog-page .catalog-grid-pager td{padding:12px 15px;background:#f5f9f6;border-top:1px solid #e3ebe6;color:#145d43;text-align:right}
+.catalog-page .catalog-grid-pager a{display:inline-block;margin:0 3px;padding:5px 9px;border:1px solid #dce6e0;border-radius:5px;background:#fff;color:#176b4b;text-decoration:none;font-weight:600}
+.catalog-page .catalog-grid-pager span{display:inline-block;margin:0 3px;padding:5px 9px;border-radius:5px;background:#176b4b;color:#fff;font-weight:700}
+.catalog-page .catalog-grid-empty td,.suppliers-page .suppliers-grid-empty td{padding:24px;text-align:center;color:#526675}
+.suppliers-branch-pill{display:flex;align-items:center;gap:10px;flex:0 0 auto;padding:9px 12px;border:1px solid #dce8df;border-radius:8px;background:#f5f9f6}
+.suppliers-branch-pill>span{color:#526675;font-size:12px;font-weight:600}
+.suppliers-page .suppliers-branch-value{display:inline-flex;align-items:center;min-height:28px;padding:4px 10px;border-radius:20px;background:#e2f0e6;color:#145d43;font-size:12px;font-weight:700}
+.suppliers-filter{display:flex;align-items:flex-end;gap:12px;margin-bottom:20px;padding:16px;background:#f6f9f7;border:1px solid #e3ebe6;border-radius:9px}
+.suppliers-filter-field{display:flex;min-width:220px;max-width:360px;flex:1;flex-direction:column;gap:7px}
+.suppliers-filter-field label{color:#263f4e;font-size:13px;font-weight:700}
+.suppliers-page .suppliers-filter-field input{box-sizing:border-box;width:100%;min-height:44px;padding:9px 12px!important;border:1px solid #cbd9d1!important;border-radius:7px!important;background:#fff!important;color:#203746!important;font:500 14px "Segoe UI",Arial,sans-serif!important}
+.suppliers-page .suppliers-filter-button{width:auto;min-height:44px;padding:9px 18px!important;border:1px solid #176b4b!important;border-radius:7px!important;background:#176b4b!important;color:#fff!important;font:700 14px "Segoe UI",Arial,sans-serif!important;white-space:nowrap;cursor:pointer}
+.suppliers-page .suppliers-filter-button:hover{background:#10563c!important}
+@media(max-width:760px){.catalog-page,.suppliers-page{padding:22px 14px 36px}.catalog-page .standard-page-heading h1,.suppliers-page .standard-page-heading h1{font-size:26px}.catalog-card,.suppliers-card{padding:20px 17px}.catalog-card-heading,.suppliers-card-heading{flex-direction:column}.suppliers-branch-pill{width:100%;box-sizing:border-box;justify-content:space-between}.suppliers-filter{align-items:stretch;flex-direction:column}.suppliers-filter-field{min-width:0;max-width:none}.suppliers-page .suppliers-filter-button{width:100%!important}}
+
+/* Income report table, filter groups, and totals. */
+.income-report-page{max-width:1200px;padding-top:34px;padding-bottom:42px}
+.income-report-page .standard-page-heading{margin-bottom:24px}
+.income-report-page .standard-page-heading h1{font-size:30px;font-weight:750;color:#193747}
+.income-report-page .standard-page-heading>div>p:last-child{font-size:14px;color:#526675}
+.income-report-card{margin-bottom:20px;padding:24px;background:#fff;border:1px solid #dce6e0;border-radius:12px;box-shadow:0 5px 18px #203b2d0a}
+.income-report-card-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:20px}
+.income-report-card-heading h2{margin:0 0 5px;color:#203746;font-size:20px;font-weight:700}
+.income-report-card-heading p{margin:0;color:#526675;font-size:14px;line-height:1.5}
+.income-report-branch-pill{display:flex;align-items:center;gap:10px;flex:0 0 auto;padding:9px 12px;border:1px solid #dce8df;border-radius:8px;background:#f5f9f6}
+.income-report-branch-pill>span{color:#526675;font-size:12px;font-weight:600}
+.income-report-page .income-report-branch-value{display:inline-flex;align-items:center;min-height:28px;padding:4px 10px;border-radius:20px;background:#e2f0e6;color:#145d43;font-size:12px;font-weight:700}
+.income-report-table-wrap{width:100%;overflow-x:auto;border:1px solid #dce6e0;border-radius:9px}
+.income-report-page .income-report-grid{width:100%;min-width:680px;border-collapse:collapse;background:#fff;color:#273d49;font:14px "Segoe UI",Arial,sans-serif}
+.income-report-page .income-report-grid th{padding:13px 14px;background:#174f3e;color:#fff;text-align:left;font-size:13px;font-weight:700;white-space:nowrap}
+.income-report-page .income-report-grid td{padding:12px 14px;border-top:1px solid #e7eeea;color:#314854;line-height:1.45;text-align:left}
+.income-report-page .income-report-grid tr.income-report-grid-alternate td{background:#f6f9f7}
+.income-report-page .income-report-grid tr:hover td{background:#edf5ef}
+.income-report-page .income-report-grid-empty td{padding:25px;text-align:center;color:#526675}
+.income-report-filter-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.income-report-filter-group{display:flex;min-width:0;flex-direction:column;gap:13px;padding:16px;border:1px solid #e3ebe6;border-radius:9px;background:#f8faf8}
+.income-report-filter-group h3{margin:0;color:#203746;font-size:15px;font-weight:700}
+.income-report-field{display:flex;min-width:0;flex-direction:column;gap:7px}
+.income-report-field label{color:#263f4e;font-size:13px;font-weight:700}
+.income-report-page .income-report-field input,.income-report-page .income-report-field select{box-sizing:border-box;width:100%;min-height:43px;padding:9px 11px!important;border:1px solid #cbd9d1!important;border-radius:7px!important;background:#fff!important;color:#203746!important;font:500 14px "Segoe UI",Arial,sans-serif!important}
+.income-report-page .income-report-field input:disabled,.income-report-page .income-report-field select:disabled{background:#f1f5f2!important;color:#405866!important;opacity:1}
+.income-report-button-row{display:flex;gap:8px;margin-top:auto}
+.income-report-page .income-report-action{width:auto;min-height:40px;flex:1;padding:8px 10px!important;border:1px solid #176b4b!important;border-radius:7px!important;background:#176b4b!important;color:#fff!important;font:700 12px "Segoe UI",Arial,sans-serif!important;cursor:pointer}
+.income-report-page .income-report-action:hover{background:#10563c!important}
+.income-report-page .income-report-secondary-action{border-color:#b7cec0!important;background:#fff!important;color:#176b4b!important}
+.income-report-page .income-report-secondary-action:hover{background:#edf5ef!important}
+.income-report-totals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:21px;padding-top:19px;border-top:1px solid #e3ebe6}
+.income-report-page .income-report-totals input:disabled{background:#f1f5f2!important;color:#405866!important;opacity:1}
+.income-report-page .income-report-balance input:disabled{background:#edf5ef!important;color:#145d43!important;font-weight:700!important}
+@media(max-width:900px){.income-report-filter-grid{grid-template-columns:1fr 1fr}.income-report-filter-group:first-child{grid-column:1/-1}}
+@media(max-width:760px){.income-report-page{padding:22px 14px 36px}.income-report-page .standard-page-heading h1{font-size:26px}.income-report-card{padding:20px 17px}.income-report-card-heading{flex-direction:column}.income-report-branch-pill{width:100%;box-sizing:border-box;justify-content:space-between}}
+@media(max-width:560px){.income-report-filter-grid{grid-template-columns:1fr}.income-report-filter-group:first-child{grid-column:auto}.income-report-totals{grid-template-columns:1fr}.income-report-button-row{flex-direction:column}.income-report-page .income-report-action{width:100%;flex:auto}.income-report-page .standard-page-heading{align-items:flex-start}}
+
+/* Bold, professional Head Office stock history report. */
+.head-office-history-page{max-width:1200px;padding-top:34px;padding-bottom:42px}
+.head-office-history-page .standard-page-heading{margin-bottom:24px}
+.head-office-history-page .standard-page-heading h1{font-size:30px;font-weight:750;color:#193747}
+.head-office-history-page .standard-page-heading>div>p:last-child{font-size:14px;color:#526675}
+.head-office-history-card{margin-bottom:20px;padding:24px;background:#fff;border:1px solid #dce6e0;border-radius:12px;box-shadow:0 5px 18px #203b2d0a}
+.head-office-history-card-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:20px}
+.head-office-history-card-heading h2{margin:0 0 5px;color:#203746;font-size:20px;font-weight:700}
+.head-office-history-card-heading p{margin:0;color:#526675;font-size:14px;line-height:1.5}
+.stock-history-table-wrap{width:100%;overflow-x:auto;border:1px solid #dce6e0;border-radius:9px}
+.head-office-history-page .stock-history-grid{width:100%;min-width:650px;border-collapse:collapse;background:#fff;color:#273d49;font:14px "Segoe UI",Arial,sans-serif}
+.head-office-history-page .stock-history-grid th{padding:13px 14px;background:#174f3e;color:#fff;text-align:left;font-size:13px;font-weight:700;white-space:nowrap}
+.head-office-history-page .stock-history-grid td{padding:12px 14px;border-top:1px solid #e7eeea;color:#314854;line-height:1.45;text-align:left}
+.head-office-history-page .stock-history-grid tr.stock-history-grid-alternate td{background:#f6f9f7}
+.head-office-history-page .stock-history-grid tr:hover td{background:#edf5ef}
+.head-office-history-page .stock-history-grid-empty td{padding:26px;text-align:center;color:#526675}
+.stock-history-filter-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.stock-history-field{display:flex;min-width:0;flex-direction:column;gap:8px}
+.stock-history-field label,.stock-history-total label{color:#263f4e;font-size:14px;font-weight:700}
+.head-office-history-page .stock-history-field select,.head-office-history-page .stock-history-field input{box-sizing:border-box;width:100%;min-height:45px;padding:9px 12px!important;border:1px solid #cbd9d1!important;border-radius:7px!important;background:#fff!important;color:#203746!important;font:500 14px "Segoe UI",Arial,sans-serif!important}
+.stock-history-totals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:22px;padding-top:20px;border-top:1px solid #e3ebe6}
+.stock-history-total{display:flex;min-width:0;flex-direction:column;gap:8px;padding:15px;border:1px solid #dce8df;border-radius:9px;background:#f5f9f6}
+.head-office-history-page .stock-history-total input{box-sizing:border-box;width:100%;min-height:47px;padding:9px 12px!important;border:1px solid #cbd9d1!important;border-radius:7px!important;background:#fff!important;color:#145d43!important;font:700 18px "Segoe UI",Arial,sans-serif!important}
+.head-office-history-page .stock-history-total-value input{background:#edf5ef!important}
+.head-office-history-page .stock-history-print-button{width:auto;min-height:42px;padding:9px 17px!important;border:1px solid #176b4b!important;border-radius:7px!important;background:#176b4b!important;color:#fff!important;font:700 14px "Segoe UI",Arial,sans-serif!important;white-space:nowrap;cursor:pointer}
+.head-office-history-page .stock-history-print-button:hover{background:#10563c!important}
+@media(max-width:760px){.head-office-history-page{padding:22px 14px 36px}.head-office-history-page .standard-page-heading h1{font-size:26px}.head-office-history-card{padding:20px 17px}.stock-history-filter-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.head-office-history-page .standard-page-heading{align-items:flex-start}.head-office-history-card-heading{flex-direction:column}.head-office-history-page .stock-history-print-button{width:100%!important}.stock-history-filter-grid,.stock-history-totals{grid-template-columns:1fr}}
+
+/* Head Office current stock balance. */
+.head-office-balance-page{max-width:1200px;padding-top:34px;padding-bottom:42px}
+.head-office-balance-page .standard-page-heading{margin-bottom:24px}
+.head-office-balance-page .standard-page-heading h1{font-size:30px;font-weight:750;color:#193747}
+.head-office-balance-page .standard-page-heading>div>p:last-child{font-size:14px;color:#526675}
+.head-office-balance-card{padding:24px;background:#fff;border:1px solid #dce6e0;border-radius:12px;box-shadow:0 5px 18px #203b2d0a}
+.head-office-balance-card-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:20px}
+.head-office-balance-card-heading h2{margin:0 0 5px;color:#203746;font-size:20px;font-weight:700}
+.head-office-balance-card-heading p{margin:0;color:#526675;font-size:14px;line-height:1.5}
+.head-office-balance-table-wrap{width:100%;overflow-x:auto;border:1px solid #dce6e0;border-radius:9px}
+.head-office-balance-page .head-office-balance-grid{width:100%;min-width:480px;border-collapse:collapse;background:#fff;color:#273d49;font:14px "Segoe UI",Arial,sans-serif}
+.head-office-balance-page .head-office-balance-grid th{padding:13px 15px;background:#174f3e;color:#fff;text-align:left;font-size:13px;font-weight:700;letter-spacing:.02em}
+.head-office-balance-page .head-office-balance-grid td{padding:13px 15px;border-top:1px solid #e7eeea;color:#314854;line-height:1.45;text-align:left}
+.head-office-balance-page .head-office-balance-grid tr.head-office-balance-grid-alternate td{background:#f6f9f7}
+.head-office-balance-page .head-office-balance-grid tr:hover td{background:#edf5ef}
+.head-office-balance-page .head-office-balance-grid-empty td{padding:25px;text-align:center;color:#526675}
+.head-office-balance-page .head-office-balance-print{width:auto;min-height:42px;padding:9px 17px!important;border:1px solid #176b4b!important;border-radius:7px!important;background:#176b4b!important;color:#fff!important;font:700 14px "Segoe UI",Arial,sans-serif!important;white-space:nowrap;cursor:pointer}
+.head-office-balance-page .head-office-balance-print:hover{background:#10563c!important}
+@media(max-width:760px){.head-office-balance-page{padding:22px 14px 36px}.head-office-balance-page .standard-page-heading h1{font-size:26px}.head-office-balance-card{padding:20px 17px}}
+@media(max-width:520px){.head-office-balance-page .standard-page-heading{align-items:flex-start}.head-office-balance-card-heading{flex-direction:column}.head-office-balance-page .head-office-balance-print{width:100%!important}}

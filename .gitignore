@@ -1,0 +1,13 @@
+.vs/
+bin/
+obj/
+packages/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+Web.config
+My Project/PublishProfiles/*.pubxml
+My Project/PublishProfiles/*.pubxml.user
+App_Data/*.mdb
+App_Data/*.accdb

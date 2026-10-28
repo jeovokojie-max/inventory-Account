@@ -1,0 +1,52 @@
+<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site.Mobile.master.vb" Inherits="jaybrix.Site_Mobile" %>
+<%@ Register Src="~/ViewSwitcher.ascx" TagPrefix="friendlyUrls" TagName="ViewSwitcher" %>
+<!DOCTYPE html>
+<html lang="en">
+<head id="Head1" runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#123c34" />
+    <title><%: Page.Title %> - JAYBRIX</title>
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link runat="server" href="~/Content/InventoryApp.css?v=4" rel="stylesheet" />
+    <link runat="server" href="~/Content/Operations.css?v=11" rel="stylesheet" />
+    <link runat="server" href="~/Content/Mobile.css?v=1" rel="stylesheet" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body class="mobile-app-body">
+    <form id="form1" runat="server">
+        <header class="mobile-site-header">
+            <div class="mobile-header-bar">
+                <a class="mobile-site-brand" runat="server" href="~/Maindisplay.aspx" aria-label="JAYBRIX overview">
+                    <span class="mobile-brand-mark">J</span>
+                    <span class="mobile-brand-copy">JAYBRIX<small>INVENTORY &amp; ACCOUNTS</small></span>
+                </a>
+                <details class="mobile-navigation">
+                    <summary><span class="mobile-menu-mark" aria-hidden="true">&#9776;</span><span>Menu</span></summary>
+                    <nav class="mobile-navigation-links" aria-label="Business navigation">
+                        <a runat="server" href="~/Maindisplay.aspx"><span>01</span>Overview</a>
+                        <a runat="server" href="~/sales.aspx"><span>02</span>Sales</a>
+                        <a runat="server" href="~/stock.aspx"><span>03</span>Head Office stock</a>
+                        <a runat="server" href="~/viewitem.aspx"><span>04</span>Products</a>
+                        <a runat="server" href="~/viewcustomers.aspx"><span>05</span>Customers</a>
+                        <a runat="server" href="~/viewsuppliers.aspx"><span>06</span>Suppliers</a>
+                        <a runat="server" href="~/Ledger.aspx"><span>07</span>Customer ledger</a>
+                        <a runat="server" href="~/supplyLedger.aspx"><span>08</span>Supplier ledger</a>
+                        <a runat="server" href="~/inoutcome.aspx"><span>09</span>Income &amp; expenses</a>
+                        <a runat="server" href="~/viewstockbal.aspx"><span>10</span>Stock balance</a>
+                        <a class="mobile-signout-link" runat="server" href="~/Index.aspx"><span>&#8599;</span>Sign out</a>
+                    </nav>
+                </details>
+            </div>
+        </header>
+        <main class="mobile-main">
+            <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        </main>
+        <footer class="mobile-site-footer">
+            <span>JAYBRIX Business Suite</span>
+            <friendlyUrls:ViewSwitcher ID="ViewSwitcher1" runat="server" />
+        </footer>
+    </form>
+</body>
+</html>
